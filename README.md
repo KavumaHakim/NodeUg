@@ -1,16 +1,67 @@
-# React + Vite
+# NodeUg
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**NodeUg** stands for *Nodes that connect young Ugandan coders*.
 
-Currently, two official plugins are available:
+NodeUg is a peer-to-peer developer platform built specifically for Ugandan coders. It is a developer ecosystem designed to **teach, connect, and empower young Ugandan developers**, with a strong focus on collaboration, learning, and real-world problem solving.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+NodeUg helps young Ugandan coders connect, share code, solve errors together, and collaborate on real-life projects. It enables direct messaging between developers using IP addresses, reducing reliance on centralized servers and encouraging true peer-to-peer communication.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The platform allows developers to share files, code, and images through a dedicated interface. It offers a terminal-style environment inspired by Kali Linux, giving users a strong, hands-on, “real tech” experience that feels purposeful and focused.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Peer-to-peer messaging using IP addresses  
+- File, code, and image sharing  
+- Terminal-inspired developer interface  
+- Project collaboration and peer learning  
+- Offline communication over LAN and Wi-Fi  
+- Online communication across the country  
+- Cross-platform support for PCs and mobile devices  
+
+## Collaboration & Learning
+
+NodeUg supports project collaboration where active developers can receive projects, work on them, and explain solutions to others. It promotes learning, problem-solving, and community building among Ugandan coders.
+
+The idea behind NodeUg comes from the overuse of platforms like WhatsApp for coding and developer collaboration. While we often claim to be Uganda’s future in tech, we still rely heavily on general-purpose chat apps for serious development work.
+
+NodeUg is designed to replace WhatsApp for *coder-specific interactions*, encouraging developers to spend less time on distractions and more time building real, impactful products. You cannot be scrolling statuses when you are building a banking system. NodeUg is meant to train us for the future we claim to be building.
+
+## Terminal Commands
+
+NodeUg includes its own command-style interactions, such as:
+
+```bash
+nodeug send <IP> <msg>
+nodeug listen
+nodeug history
+```
+
+## Networking
+
+Supports online communication across the country
+
+Enables communication with nearby IP addresses without internet access
+
+## Platform Support
+NodeUg is cross-platform and works on both PCs and mobile phones. It includes:
+
+A desktop application
+
+A mobile application with a terminal-like experience, similar to tools such as Termux
+
+## Tools & Technologies
+NodeUg is built using modern web and mobile technologies:
+
+React – web application and interface logic
+
+React Native – cross-platform mobile application development
+
+Tailwind CSS – UI styling and responsive design
+
+WebSockets / Networking APIs – real-time communication
+
+Local storage & logging mechanisms – message and activity history
+
+Git – version control and collaboration
