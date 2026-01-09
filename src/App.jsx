@@ -15,7 +15,7 @@ function App() {
       <h1 className="text-[60px] font-bold text-gray-500 wrap-break-word">Site Under Construction</h1>
       <Tooltip>
         <TooltipTrigger>
-          <Button variant="outline">Button</Button>
+          <Button variant="outline" className={"w-20 hover:opacity-70"}>Button</Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>The site is currently under construction. Please check back later!</p>
