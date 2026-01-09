@@ -1,5 +1,5 @@
 import 'react'
-import './global.css'
+import './index.css'
 // import './App.css'
 
 
