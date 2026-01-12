@@ -3,11 +3,12 @@ import '../index.css'
 import { Button } from "@/components/ui/button"
 import { Form } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import logo from '../../public/logo.svg'
 
 const Login = () =>{
   return (
     <div className='flex flex-col items-center justify-center h-screen gap-0 bg-linear-to-br from-[#FB8200] to-[#8B00DB]'>
-      <img src="../../public/logo.svg" alt="Logo" className='w-50 h-50'/>
+      <img src={logo} alt="Logo" className='w-50 h-50'/>
       <Form className='relative  flex flex-col gap-2 bg-white/20 backdrop-blur-xl p-10 rounded-[60px] border border-white/40 shadow-xl max-w-md w-full m- mt-0' method='post' action='/#'>
         
         <label htmlFor="email" className='text-[#8B00DB] ml-1'>Email</label>
