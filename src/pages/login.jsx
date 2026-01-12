@@ -3,7 +3,7 @@ import '../index.css'
 import { Button } from "@/components/ui/button"
 import { Form } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import logo from '../../public/logo.svg'
+import logo from '../logo.svg'
 
 const Login = () =>{
   return (
