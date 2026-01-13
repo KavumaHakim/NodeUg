@@ -1,4 +1,4 @@
-import { Zap, Shield, Users, BarChart3, Globe, Sparkles } from "lucide-react";
+import { Zap, Shield, Users, BarChart3, Globe, Sparkles, CodeXml } from "lucide-react";
 
 
 const features = [
@@ -28,7 +28,7 @@ const features = [
     description: "Send messages using both LANs for offline access and the internet for global reach."
   },
   {
-    icon: Sparkles,
+    icon: CodeXml,
     title: "Terminal Powered",
     description: "Leverage terminal commands for advanced development workflows."
   }
