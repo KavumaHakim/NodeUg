@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Header() {
+
+    let navigate = useNavigate();
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/50 backdrop-blur-md border-b">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -19,8 +21,8 @@ export function Header() {
         </nav> */}
         
         <div className="flex items-center gap-4">
-          <Link to="/login"><Button variant="ghost" className="hidden md:inline-flex">Sign In</Button></Link>
-          <Link to="/signup"><Button>Get Started</Button></Link>
+          <Button variant="ghost" className="hidden md:inline-flex cursor-pointer" onClick={e => navigate("/login")}>Sign In</Button>
+          <Button className={"cursor-pointer"} onClick={e => navigate("/login")} >Get Started</Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
           </Button>
