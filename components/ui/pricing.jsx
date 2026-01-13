@@ -80,7 +80,7 @@ export function Pricing() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                   Most Popular
                 </div>
               )}
@@ -100,7 +100,7 @@ export function Pricing() {
               <Button
                 className={`w-full mb-8 ${
                   plan.popular
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    ? "bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                     : ""
                 }`}
                 variant={plan.popular ? "default" : "outline"}
@@ -111,7 +111,7 @@ export function Pricing() {
               <ul className="space-y-3">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <Check className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
