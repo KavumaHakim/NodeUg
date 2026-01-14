@@ -1,7 +1,13 @@
 import React from 'react'
 import {
+  Phone,
   Plus,
+  Search,
   Smile,
+  User,
+  Video,
+  Bell,
+  Settings
 } from "lucide-react"
 
 const Dashboard = () => {
@@ -9,12 +15,28 @@ const Dashboard = () => {
     <div className='flex'>
         <SideBarChannels/>
         <SideBarChats/>
-        <MessageInput/>
+        <div className='flex flex-col w-full h-screen'>
+          <SearchBar/>
+          <MessageInterface/>
+        </div>
         
     </div>
     
   )
 }
+
+export const MessageInterface = () => {
+  return (
+    <div className='flex flex-col h-full w-3/4'>
+      <UserOptions/>
+      <div className='h-full'>
+
+      </div>
+      <MessageInput/>
+    </div>
+  )
+}
+
 
 
 export const MessageInput = () => {
@@ -52,8 +74,6 @@ export const MessageInput = () => {
 }
 
 
-
-
 export const SideBarChannels = () => {
   return (
     <div className='w-max h-screen bg-gray-900'>
@@ -82,12 +102,12 @@ export const SideBarChats = () => {
   return (
     
     <div className="
-        hidden md:flex
-        w-56 lg:w-60
+        md:flex
+        w-56 lg:w-100
         bg-purple-950
         flex-col
       ">
-        <div className="h-12 px-4 flex items-center border-b border-purple-900">
+        <div className="h-12 px-4 flex items-center border-b border-purple-900 text-center">
           <span className="text-orange-500 font-semibold">
             Direct Messages
           </span>
@@ -99,6 +119,51 @@ export const SideBarChats = () => {
           </div>
         </div>
     </div>
+  )
+}
+
+
+export const UserOptions = () => {
+  return (
+    <div className='flex justify-between h-max w-full bg-purple-900'>
+        <div className="h-12 px-3 sm:px-4 flex items-center justify-between ">
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 bg-purple-700 rounded-full flex items-center justify-center">
+              <User className="w-7 h-7 text-orange-500" />
+            </div>
+            <span className="text-orange-500 font-semibold text-sm sm:text-base">
+              Username
+            </span>
+          </div>
+          </div>
+          <div className='flex items-center justify-center gap-3 mr-5'>
+            <Video className="sm:block w-7 h-7 text-gray-400 hover:text-white cursor-pointer" />
+            <Phone className="hidden sm:block w-7 h-7 text-gray-400 hover:text-white cursor-pointer" />
+          </div>
+    </div>
+  )
+}
+
+export const SearchBar = () => {
+  return (
+    <div className='flex w-full bg-purple-950 h-max justify-center items-center'>
+      <div className="relative w-full h-13 flex items-center">
+          <Search className="w-6 h-6 text-purple-400 absolute left-7 top-1/2 -translate-y-1/2 " />
+          <input
+          type="text"
+          className="
+             bg-purple-950 border border-purple-800 rounded-full h-10
+              pl-9 pr-3 py-1.5 text-md w-full ml-5 font-bold 
+              focus:outline-none focus:border-purple-600 text-white/60
+            "
+          />
+        </div>
+        <div className='flex gap-5 ml-5 mr-5'>
+          <Bell className="hidden md:block w-8 h-8 text-gray-400 hover:text-white cursor-pointer" />
+          <User className="hidden md:block w-8 h-8 text-gray-400 hover:text-white cursor-pointer" />
+          <Settings className="w-8 h-8 text-gray-400 hover:text-white cursor-pointer" />
+        </div>
+      </div>
   )
 }
 
