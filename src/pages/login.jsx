@@ -1,8 +1,7 @@
 import 'react'
 import '../index.css'
 import { Button } from "@/components/ui/button"
-import { Form } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Form, Link } from 'react-router-dom'
 import logo from '../Logo.svg'
 
 const Login = () =>{
