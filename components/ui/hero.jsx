@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 
 export function Hero() {
@@ -34,10 +35,11 @@ export function Hero() {
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </Link>
               {/* <Button size="lg" variant="outline" className="text-lg px-8">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
-              </Button>
+              </Button> */}
             </motion.div>
             
             <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="flex items-center gap-8 pt-4">
