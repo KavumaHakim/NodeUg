@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function CTA() {
+  let navigate = useNavigate();
+
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
@@ -39,7 +41,7 @@ export function CTA() {
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-purple bg-purple hover:bg-white/10 text-lg px-8">
+            {/* <Button size="lg" variant="outline" className="border-white text-purple bg-purple hover:bg-white/10 text-lg px-8">
               Schedule a Demo
             </Button>
           </motion.div>

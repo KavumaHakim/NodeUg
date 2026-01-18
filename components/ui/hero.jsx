@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 
 
 export function Hero() {
+
+  let navigate = useNavigate();
+
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="container mx-auto">
@@ -16,7 +19,7 @@ export function Hero() {
             
             <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-5xl lg:text-6xl font-bold leading-tight">
               Work Smarter, Not Harder with{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 NodeUg
               </span>
             </motion.h1>
@@ -30,8 +33,8 @@ export function Hero() {
               <Link to="/login"><Button size="lg" className="text-lg px-8">
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button></Link>
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              </Button>
+              {/* <Button size="lg" variant="outline" className="text-lg px-8">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
               </Button>

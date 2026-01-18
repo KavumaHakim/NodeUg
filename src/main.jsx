@@ -7,6 +7,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import PageNotFound from './pages/pageNotFound'
 import Landing from './pages/landing'
+import DashBoard from './pages/dashboard'
 
 const router = createBrowserRouter([
   {
@@ -16,11 +17,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login/>
+    element: <Login/>,
+    errorElement: <PageNotFound/>
   },
   {
     path: "/signup",
-    element: <Login/>
+    element: <Login/>,
+    errorElement: <PageNotFound/>
+  },
+  {
+    path: "/dashboard",
+    element: <DashBoard/>,
+    errorElement: <PageNotFound/>
   }
 ]);
 

@@ -29,7 +29,7 @@ const features = [
     description: "Send messages using both LANs for offline access and the internet for global reach."
   },
   {
-    icon: Sparkles,
+    icon: CodeXml,
     title: "Terminal Powered",
     description: "Leverage terminal commands for advanced development workflows."
   }
