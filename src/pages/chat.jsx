@@ -10,14 +10,9 @@ import {
   Smile,
 } from "lucide-react"
 
-type Message = {
-  text: string
-  timestamp: Date
-}
-
 export default function DiscordChat() {
   const [message, setMessage] = useState("")
-  const [messages, setMessages] = useState<Message[]>([])
+  const [messages, setMessages] = useState([])
 
   const serverColors = [
     "bg-red-600",
@@ -36,7 +31,7 @@ export default function DiscordChat() {
     setMessage("")
   }
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = (e) => {
     if (e.key === "Enter") handleSendMessage()
   }
 
@@ -81,7 +76,7 @@ export default function DiscordChat() {
       </div>
 
       {/* ================= Main Chat Area ================= */}
-      <div className="flex-1 flex flex-col bg-gradient-to-b from-purple-900 to-purple-950">
+      <div className="flex-1 flex flex-col bg-linear-to-b from-purple-900 to-purple-950">
 
         {/* -------- Top Bar -------- */}
         <div className="h-12 px-3 sm:px-4 flex items-center justify-between border-b border-purple-900">
@@ -126,7 +121,7 @@ export default function DiscordChat() {
         <div className="flex-1 overflow-y-auto p-3 sm:p-4">
           {messages.map((msg, index) => (
             <div key={index} className="mb-4 flex items-start gap-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-purple-700 rounded-full flex items-center justify-center shrink-0">
                 <User className="w-5 h-5 text-purple-300" />
               </div>
 
@@ -141,7 +136,7 @@ export default function DiscordChat() {
                   </span>
                 </div>
 
-                <p className="text-sm text-gray-200 mt-1 break-words max-w-[75vw] sm:max-w-none">
+                <p className="text-sm text-gray-200 mt-1 wrap-break-word max-w-[75vw] sm:max-w-none">
                   {msg.text}
                 </p>
               </div>
