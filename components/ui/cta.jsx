@@ -25,7 +25,7 @@ export function CTA() {
           >
             Ready to Better Your Workflow?
           </motion.h2>
-        <div className="bg-linear-to-br from-orange-600 to-purple-500 rounded-3xl p-12 md:p-16 text-center text-white">
+        <div className="rounded-3xl p-12 md:p-16 text-center text-white">
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -47,8 +47,8 @@ export function CTA() {
           >
             <Button
               size="lg"
-              onClick={() => { navigate("/register"); }}
-              className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8"
+              onClick={() => { navigate("/login"); }}
+              className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-8 cursor-pointer"
             >
               Get Started Now
               <ArrowRight className="ml-2 h-5 w-5" />
