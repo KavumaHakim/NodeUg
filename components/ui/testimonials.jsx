@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -42,23 +43,44 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold mb-4">
             Loved by Developers Nationwide
           </h2>
           <p className="text-xl text-gray-600">
             See what our customers have to say about their experience with NodeUg.
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="flex gap-1 mb-4">
+            <motion.div key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.15 }}
+            whileHover={{ scale: 1.02 , y: -5}}
+            className="bg-white rounded-2xl p-8 shadow-sm hover:scale-101 ">
+              <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
+              className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <motion.div key={i}
+                  initial={{ scale: 0 , rotate: -180}}
+                  animate={{ scale: 1 , rotate: 0}}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.15 + 0.2 + i * 0.1 }}>
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
               
               <p className="text-gray-700 mb-6">
                 "{testimonial.content}"
@@ -75,7 +97,7 @@ export function Testimonials() {
                   <div className="text-sm text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
