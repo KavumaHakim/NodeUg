@@ -121,3 +121,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section-fade{
+  animation-name: fadeInUp ;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+.section-fade-sponsors{
+  animation: fadeInUp 2s linear;
+}
+.section-fade-features{
+  animation: fadeInUp 3s linear;
+}
+.section-fade-testimonials{
+  animation: fadeInUp 4s linear;
+}
+.section-fade-cta{
+  animation: fadeInUp 5s linear;
+}
+.section-fade-footer{
+  animation: fadeInUp 6s linear;
+}
